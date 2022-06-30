@@ -1,0 +1,40 @@
+{
+  "name": "yii-cms",
+  "version": "1.0.0",
+  "description": "yii-cms webpack 5",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-plugin-root-import": "^6.6.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "babel-plugin-root-import",
+      "@babel/plugin-transform-runtime"
+    ]
+  }
+}

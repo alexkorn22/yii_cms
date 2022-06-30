@@ -1,4 +1,6 @@
 <?php
+
+use app\modules\admin\assets\WebpackAsset;
 use app\widgets\FlashAlert;
 use app\modules\admin\assets\AssetBundle;
 use yii\helpers\Html;
@@ -7,6 +9,7 @@ use yii\helpers\Html;
 /* @var $content string */
 
 AssetBundle::register($this);
+WebpackAsset::register($this);
 
 $adminlteAssets = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 
