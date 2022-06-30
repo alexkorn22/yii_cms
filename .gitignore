@@ -30,3 +30,6 @@ public/.htaccess
 
 # extension dev files
 /ext
+
+# composer vendor dir
+/node_modules
