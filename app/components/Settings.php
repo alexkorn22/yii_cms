@@ -2,9 +2,9 @@
 
 namespace app\components;
 
+use app\modules\admin\forms\AppSettingsForm;
 use justcoded\yii2\settings\components\DbSettings;
 
-use justcoded\yii2\settings\forms\AppSettingsForm;
 
 /**
  * Class Settings

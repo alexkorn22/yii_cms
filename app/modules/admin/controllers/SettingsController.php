@@ -2,8 +2,8 @@
 
 namespace app\modules\admin\controllers;
 
+use app\modules\admin\forms\AppSettingsForm;
 use justcoded\yii2\settings\actions\SettingsAction;
-use justcoded\yii2\settings\forms\AppSettingsForm;
 
 /**
  * Class SettingsController

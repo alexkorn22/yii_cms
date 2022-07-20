@@ -1,8 +1,9 @@
 <?php
 
+use app\modules\admin\helpers\Main;
 use yii\web\View;
 
 /* @var $this View */
 
-$this->title = 'Dashboard';
-$this->params['subheading'] = 'Dashboard';
+$this->title = Main::t('Главная');
+$this->params['subheading'] = Main::t('Рабочий стол');

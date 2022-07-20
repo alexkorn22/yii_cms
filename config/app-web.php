@@ -13,6 +13,8 @@ $config = [
 	'runtimePath'   => dirname(__DIR__) . '/runtime',
 	'vendorPath'   => dirname(__DIR__) . '/vendor',
 	'bootstrap'  => ['log', 'settings'],
+    'language'   => 'en',
+    'sourceLanguage'   => 'ru',
 	'aliases'    => [
 		'@config'=> '@app/../config',
 		'@bower' => '@vendor/bower-asset',
@@ -51,7 +53,6 @@ $config = [
 		'cache' => [
 			'class' => \yii\caching\FileCache::class,
 		],
-		/*
 		'i18n' => [
 			'translations' => [
 				'app*' => [
@@ -61,9 +62,15 @@ $config = [
 						'app' => 'app.php',
 					],
 				],
+                'admin*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/i18n',
+                    'fileMap' => [
+                        'admin' => 'admin.php',
+                    ],
+                ],
 			],
 		],
-		*/
 		'assetManager' => [
 			'forceCopy' => YII_DEBUG,
 		],

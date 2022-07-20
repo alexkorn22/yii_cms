@@ -1,15 +1,16 @@
 <?php
 
+use app\modules\admin\helpers\Main;
 use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model justcoded\yii2\settings\forms\AppSettingsForm */
 
-$this->title                   = 'App settings';
+$this->title                   = Main::t('Настройки приложения');
 $this->params['breadcrumbs'][] = $this->title;
-$this->params['heading']       = 'Settings';
-$this->params['subheading']    = 'App';
+$this->params['heading']       = Main::t('Настройки');
+$this->params['subheading']    = Main::t('Приложение');
 
 ?>
 	
@@ -22,9 +23,9 @@ $this->params['subheading']    = 'App';
 	<?= $form->errorSummary($model); ?>
 	
 	<div class="card-body">
-		<h4>Admin Email</h4>
-		<?= $form->field($model, 'adminName')->textInput()->label('Name') ?>
-		<?= $form->field($model, 'adminEmail')->input('email')->label('Email') ?>
+		<h4><?= Main::t('Email админа')?></h4>
+		<?= $form->field($model, 'adminName')->textInput()->label(Main::t('Имя')) ?>
+		<?= $form->field($model, 'adminEmail')->input('email')->label(Main::t('Email')) ?>
 
 		<h4>System Email</h4>
 		<?= $form->field($model, 'systemName')->textInput()->label('Name') ?>
@@ -33,6 +34,12 @@ $this->params['subheading']    = 'App';
 		<h4>Authentication</h4>
 		<?= $form->field($model, 'passwordResetToken')->input('number') ?>
 		<?= $form->field($model, 'rememberMeExpiration')->input('number') ?>
+
+        <h4><?= Main::t('Язык админки')?></h4>
+        <?= $form->field($model, 'adminLanguage')->dropDownList([
+                'ru' => 'Русский',
+                'en' => 'English',
+        ])->label(Main::t('Язык')) ?>
 	</div>
 	<div class="card-footer text-right">
 		<?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
