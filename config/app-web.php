@@ -116,6 +116,14 @@ if (YII_ENV_DEV) {
 		'class' => \yii\gii\Module::class,
 		// uncomment the following to add your IP if you are not connecting from localhost.
 		'allowedIPs' => ['*'],
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@config/gii/templates/crud/simple',
+                ]
+            ]
+        ],
 	];
 }
 

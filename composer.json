@@ -8,16 +8,17 @@
   "prefer-stable": true,
   "require": {
     "php": ">=7.0",
+    "almasaeed2010/adminlte": "v3.0.0-beta.1",
+    "creocoder/yii2-nested-sets": "^0.9.0",
+    "justcoded/dotenv-sync": "*",
+    "justcoded/yii2-rbac": "*",
+    "justcoded/yii2-settings": "*",
+    "vlucas/phpdotenv": "~2.2",
     "yiisoft/yii2": "~2.0.22",
     "yiisoft/yii2-bootstrap4": "~1.0.0",
-    "yiisoft/yii2-swiftmailer": "~2.0.0",
     "yiisoft/yii2-faker": "~2.0.0",
-    "vlucas/phpdotenv": "~2.2",
-    "justcoded/yii2-settings": "*",
-    "justcoded/yii2-rbac": "*",
-    "justcoded/dotenv-sync": "*",
-    "almasaeed2010/adminlte": "v3.0.0-beta.1",
-    "yiisoft/yii2-jui": "~2.0.0"
+    "yiisoft/yii2-jui": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.0.0",
