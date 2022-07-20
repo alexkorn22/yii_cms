@@ -9,8 +9,8 @@ use app\modules\admin\widgets\Menu;
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-dark-info">
 	<!-- Brand Logo -->
-	<a href="<?= Yii::$app->homeUrl; ?>" class="brand-link">
-		<span class="brand-image" style="opacity: .8; line-height: 1.8em">APP</span>
+	<a href="<?= Yii::$app->homeUrl; ?>" target="_blank" class="brand-link">
+		<span class="brand-image" style="opacity: .8; line-height: 1.8em"></span>
 		<span class="brand-text font-weight-light"><?= Html::encode(Yii::$app->name); ?></span>
 	</a>
 
