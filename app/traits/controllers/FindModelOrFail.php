@@ -21,8 +21,12 @@ trait FindModelOrFail
 	 * @return ActiveRecord instance matching the condition, or throw exception.
 	 * @throws NotFoundHttpException
 	 */
-	protected function findModel($id)
+	protected function findModel($id, $modelClass = null)
 	{
+        if ($modelClass) {
+            $this->modelClass = $modelClass;
+        }
+
 		if (empty($this->modelClass)) {
 			throw new InvalidCallException(__CLASS__ . '::findModel() method requires $this->modelClass property to be set.');
 		}

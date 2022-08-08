@@ -13,19 +13,11 @@ class m220720_122439_addMainMenu extends Migration
 	 */
 	public function safeUp()
 	{
-        $this->insert('menu' , ['name' => 'Main']);
+        $this->insert('menu' , ['name' => 'Main', 'label' => 'Основное']);
 
         $model = new MenuItem();
         $model->menu_id = 1;
         $model->name = 'Root';
-        $model->validate();
-        $model->makeRoot();
-
-        $this->insert('menu' , ['name' => 'Main 2']);
-
-        $model = new MenuItem();
-        $model->menu_id = 2;
-        $model->name = 'Root 2';
         $model->validate();
         $model->makeRoot();
 	}

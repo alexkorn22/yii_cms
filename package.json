@@ -4,7 +4,11 @@
   "description": "yii-cms webpack 5",
   "dependencies": {
     "axios": "^0.21.1",
+    "mobx": "^6.6.1",
+    "mobx-react-lite": "^3.4.0",
+    "qs": "^6.11.0",
     "react": "^16.0.0",
+    "react-bootstrap": "^1.6.5",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {

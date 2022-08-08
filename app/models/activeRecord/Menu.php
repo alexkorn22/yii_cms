@@ -40,8 +40,8 @@ class Menu extends ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
-            'label' => Yii::t('app', 'Label'),
+            'name' => Yii::t('app', 'Имя'),
+            'label' => Yii::t('app', 'Отображаемое имя'),
         ];
     }
 }

@@ -54,6 +54,12 @@ use app\modules\admin\widgets\Menu;
 						'active' => 'dashboard' === Yii::$app->controller->id,
 					],
                     [
+                        'label' => Main::t('Меню'),
+                        'icon' => 'fas fa-bars',
+                        'url' => ['/admin/menu'],
+                        'active' => 'menu' === Yii::$app->controller->id,
+                    ],
+                    [
                         'label' => Main::t('Пользователи'),
                         'icon'  => 'fas fa-users',
                         'url'   => '#',

@@ -5,7 +5,9 @@ namespace app\models\activeRecord;
 use app\models\activeQuery\MenuItemQuery;
 use creocoder\nestedsets\NestedSetsBehavior;
 use Yii;
+use yii\db\ActiveQuery;
 use yii\db\ActiveRecord;
+use yii\helpers\ArrayHelper;
 
 /**
  * This is the model class for table "menu_item".
@@ -18,6 +20,8 @@ use yii\db\ActiveRecord;
  * @property int $depth
  * @property int $position
  * @property string $url
+ *
+ * @property-read MenuItem parent
  *
  * @mixin NestedSetsBehavior
  */
@@ -83,5 +87,61 @@ class MenuItem extends ActiveRecord
             'position' => Yii::t('app', 'Position'),
             'url' => Yii::t('app', 'Url'),
         ];
+    }
+
+    public function fields(): array
+    {
+        return ArrayHelper::merge(parent::fields(), [
+            'parentId',
+        ]);
+    }
+
+    /**
+     * Get parent's ID
+     * @return int
+     */
+    public function getParentId(): ?int
+    {
+        $parent = $this->parent;
+        return $parent ? $parent->id : null;
+    }
+
+    /**
+     * Get parent's node
+     * @return array|\yii\db\ActiveQuery|ActiveRecord
+     */
+    public function getParent()
+    {
+        return $this->parents(1)->one();
+    }
+
+    /**
+     * Get a full tree as a list, except the node and its children
+     * @param  integer $node_id node's ID
+     * @return array array of node
+     */
+    public static function getTree($menuId, $node_id = 0)
+    {
+        // don't include children and the node
+        $children = [];
+
+        if ( ! empty($node_id))
+            $children = array_merge(
+                self::findOne($node_id)->where(['menu_id' => $menuId])->children()->column(),
+                [$node_id]
+            );
+
+        $rows = self::find()
+            ->select('id, name, depth')
+            ->where(['NOT IN', 'id', $children])
+            ->andWhere(['menu_id' => $menuId])
+            ->orderBy('lft, position')
+            ->all();
+
+        $return = [];
+        foreach ($rows as $row)
+            $return[$row->id] = str_repeat('---', $row->depth) . ' ' . $row->name;
+
+        return $return;
     }
 }
