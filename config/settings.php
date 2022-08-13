@@ -3,7 +3,7 @@
 return [
 	'class'     => 'app\components\Settings',
 	'modelsMap' => [
-		'app' => \justcoded\yii2\settings\forms\AppSettingsForm::class,
+		'app' => \app\modules\admin\forms\AppSettingsForm::class,
 	],
 	'defaults' => [
 		'app' => [

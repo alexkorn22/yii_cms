@@ -1,5 +1,6 @@
 <?php
 
+use app\modules\admin\helpers\Main;
 use app\widgets\Block;
 use yii\widgets\Breadcrumbs;
 use yii\helpers\Html;
@@ -27,7 +28,7 @@ use app\modules\admin\Module as AdminModule;
 				<div class="col-sm-6">
 					<?= Breadcrumbs::widget([
 						'homeLink' => [
-							'label' => 'Dashboard',
+							'label' => Main::t('Главная'),
 							'url' => ['/admin/dashboard'],
 							'encode' => false,
 						],

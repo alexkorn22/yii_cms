@@ -10,9 +10,12 @@ dotenv()->required('APP_KEY')->notEmpty();
 $config = [
 	'id'         => 'main',
 	'basePath'   => dirname(__DIR__) . '/app',
+    'name' => 'Top-content',
 	'runtimePath'   => dirname(__DIR__) . '/runtime',
 	'vendorPath'   => dirname(__DIR__) . '/vendor',
 	'bootstrap'  => ['log', 'settings'],
+    'language'   => 'en',
+    'sourceLanguage'   => 'ru',
 	'aliases'    => [
 		'@config'=> '@app/../config',
 		'@bower' => '@vendor/bower-asset',
@@ -51,7 +54,6 @@ $config = [
 		'cache' => [
 			'class' => \yii\caching\FileCache::class,
 		],
-		/*
 		'i18n' => [
 			'translations' => [
 				'app*' => [
@@ -61,9 +63,15 @@ $config = [
 						'app' => 'app.php',
 					],
 				],
+                'admin*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/i18n',
+                    'fileMap' => [
+                        'admin' => 'admin.php',
+                    ],
+                ],
 			],
 		],
-		*/
 		'assetManager' => [
 			'forceCopy' => YII_DEBUG,
 		],
@@ -108,6 +116,14 @@ if (YII_ENV_DEV) {
 		'class' => \yii\gii\Module::class,
 		// uncomment the following to add your IP if you are not connecting from localhost.
 		'allowedIPs' => ['*'],
+        'generators' => [ // HERE
+            'crud' => [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates' => [
+                    'adminlte' => '@config/gii/templates/crud/simple',
+                ]
+            ]
+        ],
 	];
 }
 

@@ -1,3 +1,3 @@
 <footer class="main-footer">
-	<strong>&copy; 2017 My Company</strong>. All rights reserved.
+	<strong>&copy; 2022 Yii2 CMS</strong>. All rights reserved.
 </footer>

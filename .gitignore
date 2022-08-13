@@ -33,3 +33,5 @@ public/.htaccess
 
 # composer vendor dir
 /node_modules
+
+/temp
