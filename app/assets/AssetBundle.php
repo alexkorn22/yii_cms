@@ -38,7 +38,6 @@ class AssetBundle extends \yii\web\AssetBundle
         'js/range_slider.js',
         'js/regenerator-runtime.min.js',
         'js/wp-polyfill.min.js',
-        'js/index.js',
         'js/ucf7_scripts.js',
         'js/js.cookie.min.js',
         'js/jquery.min_1.js',

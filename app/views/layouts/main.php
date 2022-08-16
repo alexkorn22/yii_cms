@@ -485,31 +485,6 @@ WebpackAsset::register($this);
             </div><!-- #footer-wrapper -->
         </footer></div><!-- .off-canvas-content -->
 </div><!-- #page.off-canvas-wrapper -->
-
-<script type="text/javascript" id="ugb-block-frontend-js-js-extra">
-    /* <![CDATA[ */
-    var stackable = {"restUrl":"https:\/\/topcontent.com\/wp-json\/"};
-    /* ]]> */
-</script>
-<script type="text/javascript" id="Popup.js-js-before">
-    var sgpbPublicUrl = "https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/";
-    var SGPB_JS_LOCALIZATION = {"imageSupportAlertMessage":"Only image files supported","areYouSure":"Are you sure?","addButtonSpinner":"L","audioSupportAlertMessage":"Only audio files supported (e.g.: mp3, wav, m4a, ogg)","publishPopupBeforeElementor":"Please, publish the popup before starting to use Elementor with it!","publishPopupBeforeDivi":"Please, publish the popup before starting to use Divi Builder with it!","closeButtonAltText":"Close"};
-</script>
-<script type="text/javascript" id="PopupBuilder.js-js-before">
-    var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages":{"1":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_1\/close.png","2":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_2\/close.png","3":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_3\/close.png","5":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_5\/close.png","6":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_6\/close.png"},"homePageUrl":"https:\/\/topcontent.com\/","isPreview":false,"convertedIdsReverse":[],"dontShowPopupExpireTime":365,"conditionalJsClasses":[],"disableAnalyticsGeneral":false};
-    var SGPB_JS_PACKAGES = {"packages":{"current":1,"free":1,"silver":2,"gold":3,"platinum":4},"extensions":{"geo-targeting":false,"advanced-closing":false}};
-    var SGPB_JS_PARAMS = {"ajaxUrl":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php","nonce":"ce905c50df"};
-</script>
-<script type="text/javascript">
-    document.addEventListener( 'wpcf7mailsent', function( event ) {
-        console.log(event.detail.contactFormId)
-        if ( '10465' == event.detail.contactFormId ) {
-            console.log('sent')
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({'event': 'quote_form_submitted'});
-        }
-    }, false );
-</script>
 <div class="sgpb-main-popup-data-container-19824" style="position:fixed;opacity: 0;filter: opacity(0%);transform: scale(0);">
     <div class="sg-popup-builder-content" id="sg-popup-content-wrapper-19824" data-id="19824" data-events="[{" param":"click","operator":"clickActionCustomClass","value":"pricing-page-pop-up","hiddenOption":[]}]" data-options="YTo1MDp7czoyNjoic2dwYi1mbG9hdGluZy1idXR0b24tc3R5bGUiO3M6NjoiY29ybmVyIjtzOjI5OiJzZ3BiLWZsb2F0aW5nLWJ1dHRvbi1wb3NpdGlvbiI7czoxMjoiYm90dG9tLXJpZ2h0IjtzOjk6InNncGItdHlwZSI7czo0OiJodG1sIjtzOjE1OiJzZ3BiLWlzLXByZXZpZXciO3M6MToiMCI7czoxNDoic2dwYi1pcy1hY3RpdmUiO3M6NzoiY2hlY2tlZCI7czozNDoic2dwYi1iZWhhdmlvci1hZnRlci1zcGVjaWFsLWV2ZW50cyI7YToxOntpOjA7YToxOntpOjA7YToxOntzOjU6InBhcmFtIjtzOjEyOiJzZWxlY3RfZXZlbnQiO319fXM6MjA6InNncGItY29udGVudC1wYWRkaW5nIjtzOjI6IjEyIjtzOjE4OiJzZ3BiLXBvcHVwLXotaW5kZXgiO3M6NDoiOTk5OSI7czoxNzoic2dwYi1wb3B1cC10aGVtZXMiO3M6MTI6InNncGItdGhlbWUtNiI7czoyNToic2dwYi1vdmVybGF5LWN1c3RvbS1jbGFzcyI7czoxODoic2dwYi1wb3B1cC1vdmVybGF5IjtzOjE4OiJzZ3BiLW92ZXJsYXktY29sb3IiO3M6MDoiIjtzOjIwOiJzZ3BiLW92ZXJsYXktb3BhY2l0eSI7czozOiIwLjgiO3M6MjU6InNncGItY29udGVudC1jdXN0b20tY2xhc3MiO3M6MTY6InNnLXBvcHVwLWNvbnRlbnQiO3M6MjY6InNncGItYmFja2dyb3VuZC1pbWFnZS1tb2RlIjtzOjk6Im5vLXJlcGVhdCI7czoxMjoic2dwYi1lc2Mta2V5IjtzOjI6Im9uIjtzOjI0OiJzZ3BiLWVuYWJsZS1jbG9zZS1idXR0b24iO3M6Mjoib24iO3M6MjM6InNncGItY2xvc2UtYnV0dG9uLWRlbGF5IjtzOjE6IjAiO3M6MjY6InNncGItY2xvc2UtYnV0dG9uLXBvc2l0aW9uIjtzOjg6InRvcFJpZ2h0IjtzOjI0OiJzZ3BiLWJ1dHRvbi1wb3NpdGlvbi10b3AiO3M6MjoiMTgiO3M6MjY6InNncGItYnV0dG9uLXBvc2l0aW9uLXJpZ2h0IjtzOjI6IjE4IjtzOjI3OiJzZ3BiLWJ1dHRvbi1wb3NpdGlvbi1ib3R0b20iO3M6MToiMCI7czoyNToic2dwYi1idXR0b24tcG9zaXRpb24tbGVmdCI7czowOiIiO3M6MTc6InNncGItYnV0dG9uLWltYWdlIjtzOjY0OiJodHRwczovL3RvcGNvbnRlbnQuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIwLzAxL0ljb24tYmxhY2sucG5nIjtzOjIzOiJzZ3BiLWJ1dHRvbi1pbWFnZS13aWR0aCI7czoyOiIxNSI7czoyNDoic2dwYi1idXR0b24taW1hZ2UtaGVpZ2h0IjtzOjI6IjE1IjtzOjE3OiJzZ3BiLWJvcmRlci1jb2xvciI7czo3OiIjMDAwMDAwIjtzOjE4OiJzZ3BiLWJvcmRlci1yYWRpdXMiO3M6MToiMCI7czoyMzoic2dwYi1ib3JkZXItcmFkaXVzLXR5cGUiO3M6MToiJSI7czoxNjoic2dwYi1idXR0b24tdGV4dCI7czo1OiJDbG9zZSI7czoxODoic2dwYi1vdmVybGF5LWNsaWNrIjtzOjI6Im9uIjtzOjI1OiJzZ3BiLXBvcHVwLWRpbWVuc2lvbi1tb2RlIjtzOjE0OiJyZXNwb25zaXZlTW9kZSI7czozMzoic2dwYi1yZXNwb25zaXZlLWRpbWVuc2lvbi1tZWFzdXJlIjtzOjQ6ImF1dG8iO3M6MTA6InNncGItd2lkdGgiO3M6NToiNjQwcHgiO3M6MTE6InNncGItaGVpZ2h0IjtzOjU6IjQ4MHB4IjtzOjE0OiJzZ3BiLW1heC13aWR0aCI7czowOiIiO3M6MTU6InNncGItbWF4LWhlaWdodCI7czowOiIiO3M6MTQ6InNncGItbWluLXdpZHRoIjtzOjM6IjEyMCI7czoxNToic2dwYi1taW4taGVpZ2h0IjtzOjA6IiI7czoyNjoic2dwYi1vcGVuLWFuaW1hdGlvbi1lZmZlY3QiO3M6OToiTm8gZWZmZWN0IjtzOjI3OiJzZ3BiLWNsb3NlLWFuaW1hdGlvbi1lZmZlY3QiO3M6OToiTm8gZWZmZWN0IjtzOjI5OiJzZ3BiLWVuYWJsZS1jb250ZW50LXNjcm9sbGluZyI7czoyOiJvbiI7czoxNjoic2dwYi1wb3B1cC1vcmRlciI7czoxOiIwIjtzOjE2OiJzZ3BiLXBvcHVwLWRlbGF5IjtzOjE6IjAiO3M6Nzoic2dwYi1qcyI7czoyOiJKUyI7czo4OiJzZ3BiLWNzcyI7czozOiJDU1MiO3M6MTI6InNncGItcG9zdC1pZCI7czo1OiIxOTgyNCI7czoyNToic2dwYi1lbmFibGUtcG9wdXAtb3ZlcmxheSI7czoyOiJvbiI7czoyMjoic2dwYi1idXR0b24taW1hZ2UtZGF0YSI7czo2NDoiaHR0cHM6Ly90b3Bjb250ZW50LmNvbS93cC1jb250ZW50L3VwbG9hZHMvMjAyMC8wMS9JY29uLWJsYWNrLnBuZyI7czoyNjoic2dwYi1iYWNrZ3JvdW5kLWltYWdlLWRhdGEiO3M6MDoiIjtzOjE0OiJzZ3BiQ29uZGl0aW9ucyI7Tjt9">
     <div class="sgpb-popup-builder-content-19824 sgpb-popup-builder-content-html"><div class="sgpb-main-html-content-wrapper">
@@ -547,81 +522,7 @@ WebpackAsset::register($this);
         </div></div>
 </div>
 </div>
-<script type="text/javascript" id="cf7mls-js-extra">
-    /* <![CDATA[ */
-    var cf7mls_object = {"ajax_url":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php","cf7mls_error_message":"","scroll_step":"true","disable_enter_key":"false","check_step_before_submit":"true"};
-    /* ]]> */
-</script>
-<script type="text/javascript" id="contact-form-7-js-extra">
-    /* <![CDATA[ */
-    var wpcf7 = {"api":{"root":"https:\/\/topcontent.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-    /* ]]> */
-</script>
-<script type="text/javascript" id="wpcf7cf-scripts-js-extra">
-    /* <![CDATA[ */
-    var wpcf7cf_global_settings = {"ajaxurl":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php"};
-    /* ]]> */
-</script>
-<script type="text/javascript">
-    (function() {
-        var expirationDate = new Date();
-        expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
-        document.cookie = "pll_language=ru; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
-    }());
-</script>
-<script type="text/javascript">
-    jQuery(document).ready(function ($) {
-
-        for (let i = 0; i < document.forms.length; ++i) {
-            let form = document.forms[i];
-            if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="gbPueXoafBQxhD" value="uXm5jly" />'); }
-            if ($(form).attr("method") != "get") { $(form).append('<input type="hidden" name="eyYWBdhrRSXKnZ" value="ePFn4BaMx" />'); }
-        }
-
-        $(document).on('submit', 'form', function () {
-            if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="gbPueXoafBQxhD" value="uXm5jly" />'); }
-            if ($(this).attr("method") != "get") { $(this).append('<input type="hidden" name="eyYWBdhrRSXKnZ" value="ePFn4BaMx" />'); }
-            return true;
-        });
-
-        jQuery.ajaxSetup({
-            beforeSend: function (e, data) {
-
-                if (data.type !== 'POST') return;
-
-                if (typeof data.data === 'object' && data.data !== null) {
-                    data.data.append("gbPueXoafBQxhD", "uXm5jly");
-                    data.data.append("eyYWBdhrRSXKnZ", "ePFn4BaMx");
-                }
-                else {
-                    data.data = data.data + '&gbPueXoafBQxhD=uXm5jly&eyYWBdhrRSXKnZ=ePFn4BaMx';
-                }
-            }
-        });
-
-    });
-</script>
-<script>
-    const url = new URL(window.location)
-    const affIdFromUrl = url.searchParams.get('aff_id')
-    if (affIdFromUrl) localStorage.setItem('affId', affIdFromUrl)
-
-    const affIdSaved = localStorage.getItem('affId')
-    if (affIdSaved) {
-        $('a[href^="https://app.topcontent.com"]').each(function () {
-            const url = new URL(this.href)
-            url.searchParams.append('aff_id', affIdSaved)
-            this.href = url.href
-        })
-    }
-</script>
-<script>
-    ll = new LazyLoad({
-        elements_selector: ".lazy",
-    });
-</script>
-
-<script>window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="js/lazyload.min_1.js"></script>
+<script async src="/js/lazyload.min_1.js"></script>
 
 <?php $this->endBody() ?>
 </body>
