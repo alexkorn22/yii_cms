@@ -21,11 +21,32 @@ class AssetBundle extends \yii\web\AssetBundle
         'css/style.css',
         'css/stylesheet.css',
         'css/all.css',
-        'https://fonts.googleapis.com/css?family=IBM+Plex+Sans%3A400%2C400i%2C600&amp;display=swap&amp;subset=cyrillic&amp;ver=5.8.4'
+        'https://fonts.googleapis.com/css?family=IBM+Plex+Sans%3A400%2C400i%2C600&amp;display=swap&amp;subset=cyrillic&amp;ver=5.8.4',
 	];
 
 	public $js = [
+        'js/frontend_blocks.js',
+        'js/jquery.min.js',
+        'js/jquery-migrate.min.js',
+        'js/Popup.js',
+        'js/PopupConfig.js',
+        'js/PopupBuilder.js',
+        'js/wp-embed.min.js',
+        'js/jquery.form.min.js',
+        'js/cf7mls.js',
+        'js/ion.rangeSlider.min.js',
+        'js/range_slider.js',
+        'js/regenerator-runtime.min.js',
+        'js/wp-polyfill.min.js',
+        'js/index.js',
+        'js/ucf7_scripts.js',
+        'js/js.cookie.min.js',
+        'js/jquery.min_1.js',
+        'js/app.min.js',
+        'js/scripts.js',
+        'js/lazyload.min.js',
 	];
+
 	public $depends = [
 		//YiiAsset::class,
 		//BootstrapAsset::class,

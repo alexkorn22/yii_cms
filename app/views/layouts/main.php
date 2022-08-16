@@ -509,22 +509,15 @@ WebpackAsset::register($this);
     var stackable = {"restUrl":"https:\/\/topcontent.com\/wp-json\/"};
     /* ]]> */
 </script>
-<script type="text/javascript" src="js/frontend_blocks.js" id="ugb-block-frontend-js-js"></script>
-<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
-<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 <script type="text/javascript" id="Popup.js-js-before">
     var sgpbPublicUrl = "https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/";
     var SGPB_JS_LOCALIZATION = {"imageSupportAlertMessage":"Only image files supported","areYouSure":"Are you sure?","addButtonSpinner":"L","audioSupportAlertMessage":"Only audio files supported (e.g.: mp3, wav, m4a, ogg)","publishPopupBeforeElementor":"Please, publish the popup before starting to use Elementor with it!","publishPopupBeforeDivi":"Please, publish the popup before starting to use Divi Builder with it!","closeButtonAltText":"Close"};
 </script>
-<script type="text/javascript" src="js/Popup.js" id="Popup.js-js"></script>
-<script type="text/javascript" src="js/PopupConfig.js" id="PopupConfig.js-js"></script>
 <script type="text/javascript" id="PopupBuilder.js-js-before">
     var SGPB_POPUP_PARAMS = {"popupTypeAgeRestriction":"ageRestriction","defaultThemeImages":{"1":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_1\/close.png","2":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_2\/close.png","3":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_3\/close.png","5":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_5\/close.png","6":"https:\/\/topcontent.com\/wp-content\/plugins\/popup-builder\/public\/img\/theme_6\/close.png"},"homePageUrl":"https:\/\/topcontent.com\/","isPreview":false,"convertedIdsReverse":[],"dontShowPopupExpireTime":365,"conditionalJsClasses":[],"disableAnalyticsGeneral":false};
     var SGPB_JS_PACKAGES = {"packages":{"current":1,"free":1,"silver":2,"gold":3,"platinum":4},"extensions":{"geo-targeting":false,"advanced-closing":false}};
     var SGPB_JS_PARAMS = {"ajaxUrl":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php","nonce":"ce905c50df"};
 </script>
-<script type="text/javascript" src="js/PopupBuilder.js" id="PopupBuilder.js-js"></script>
-<script type="text/javascript" src="js/wp-embed.min.js" id="wp-embed-js"></script>
 <script type="text/javascript">
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         console.log(event.detail.contactFormId)
@@ -572,33 +565,21 @@ WebpackAsset::register($this);
         </div></div>
 </div>
 </div>
-<script type="text/javascript" src="js/jquery.form.min.js" id="jquery-form-js"></script>
 <script type="text/javascript" id="cf7mls-js-extra">
     /* <![CDATA[ */
     var cf7mls_object = {"ajax_url":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php","cf7mls_error_message":"","scroll_step":"true","disable_enter_key":"false","check_step_before_submit":"true"};
     /* ]]> */
 </script>
-<script type="text/javascript" src="js/cf7mls.js" id="cf7mls-js"></script>
-<script type="text/javascript" src="js/ion.rangeSlider.min.js" id="ionrangeslider-js"></script>
-<script type="text/javascript" src="js/range_slider.js" id="contact-form-7-range_slider-js"></script>
-<script type="text/javascript" src="js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
-<script type="text/javascript" src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
 <script type="text/javascript" id="contact-form-7-js-extra">
     /* <![CDATA[ */
     var wpcf7 = {"api":{"root":"https:\/\/topcontent.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
     /* ]]> */
 </script>
-<script type="text/javascript" src="js/index.js" id="contact-form-7-js"></script>
-<script type="text/javascript" src="js/ucf7_scripts.js" id="utm_contact_form7_scripts-js"></script>
-<script type="text/javascript" src="js/js.cookie.min.js" id="cookie-scripts-js"></script>
-<script type="text/javascript" src="js/jquery.min_1.js" id="foundation-jquery-js"></script>
-<script type="text/javascript" src="js/app.min.js" id="foundation-scripts-js"></script>
 <script type="text/javascript" id="wpcf7cf-scripts-js-extra">
     /* <![CDATA[ */
     var wpcf7cf_global_settings = {"ajaxurl":"https:\/\/topcontent.com\/wp-admin\/admin-ajax.php"};
     /* ]]> */
 </script>
-<script type="text/javascript" src="js/scripts.js" id="wpcf7cf-scripts-js"></script>
 <script type="text/javascript">
     (function() {
         var expirationDate = new Date();
@@ -652,7 +633,6 @@ WebpackAsset::register($this);
         })
     }
 </script>
-<script src="js/lazyload.min.js"></script>
 <script>
     ll = new LazyLoad({
         elements_selector: ".lazy",
