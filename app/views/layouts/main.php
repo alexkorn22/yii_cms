@@ -17,18 +17,12 @@ WebpackAsset::register($this);
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head>
-    <style>img.lazy{min-height:1px}</style>
     <link rel="preload" href="/js/lazyload.min.js" as="script">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<!--    <link rel="alternate" href="https://topcontent.com/buy-content-online/" hreflang="en">-->
-<!--    <link rel="alternate" href="https://topcontent.com/ru/kupit-kontent-onlajn/" hreflang="ru">-->
-<!--    <link rel="alternate" href="https://topcontent.com/no/kjop-innhold-pa-nett/" hreflang="nb">-->
-<!--    <link rel="alternate" href="https://topcontent.com/sv/kop-content-online/" hreflang="sv">-->
-<!--    <link rel="alternate" href="https://topcontent.com/fi/osta-sisaltoa-verkosta/" hreflang="fi">-->
     <?= Html::csrfMetaTags() ?>
     <title>Купить контент онлайн | Быстро выполним любой заказ на 15 языках | Topcontent</title>
     <meta name="description" content="Покупайте контент и переводы на 15 языках от Topcontent онлайн. Размещайте и отслеживайте статус своих заказов через наш удобный сервис самообслуживания.">
@@ -47,23 +41,11 @@ WebpackAsset::register($this);
 
 
     <link rel="dns-prefetch" href="//s.w.org">
-    <style id="ugb-style-css-inline-css" type="text/css">
-        :root {
-            --content-width: 760px;
-        }
-    </style>
-    <style type="text/css">div[id^="wpcf7-f20423-p"] button.cf7mls_next {   }div[id^="wpcf7-f20423-p"] button.cf7mls_back {   }div[id^="wpcf7-f20063-p"] button.cf7mls_next {   }div[id^="wpcf7-f20063-p"] button.cf7mls_back {   }div[id^="wpcf7-f19954-p"] button.cf7mls_next {   }div[id^="wpcf7-f19954-p"] button.cf7mls_back {   }div[id^="wpcf7-f19953-p"] button.cf7mls_next {   }div[id^="wpcf7-f19953-p"] button.cf7mls_back {   }div[id^="wpcf7-f19949-p"] button.cf7mls_next {   }div[id^="wpcf7-f19949-p"] button.cf7mls_back {   }div[id^="wpcf7-f15648-p"] button.cf7mls_next {   }div[id^="wpcf7-f15648-p"] button.cf7mls_back {   }div[id^="wpcf7-f12273-p"] button.cf7mls_next {   }div[id^="wpcf7-f12273-p"] button.cf7mls_back {   }div[id^="wpcf7-f11060-p"] button.cf7mls_next {   }div[id^="wpcf7-f11060-p"] button.cf7mls_back {   }div[id^="wpcf7-f10465-p"] button.cf7mls_next {   }div[id^="wpcf7-f10465-p"] button.cf7mls_back {   }div[id^="wpcf7-f9947-p"] button.cf7mls_next {   }div[id^="wpcf7-f9947-p"] button.cf7mls_back {   }div[id^="wpcf7-f9193-p"] button.cf7mls_next {   }div[id^="wpcf7-f9193-p"] button.cf7mls_back {   }div[id^="wpcf7-f4592-p"] button.cf7mls_next {   }div[id^="wpcf7-f4592-p"] button.cf7mls_back {   }div[id^="wpcf7-f4590-p"] button.cf7mls_next {   }div[id^="wpcf7-f4590-p"] button.cf7mls_back {   }div[id^="wpcf7-f4463-p"] button.cf7mls_next {   }div[id^="wpcf7-f4463-p"] button.cf7mls_back {   }div[id^="wpcf7-f4461-p"] button.cf7mls_next {   }div[id^="wpcf7-f4461-p"] button.cf7mls_back {   }div[id^="wpcf7-f4459-p"] button.cf7mls_next {   }div[id^="wpcf7-f4459-p"] button.cf7mls_back {   }div[id^="wpcf7-f4375-p"] button.cf7mls_next {   }div[id^="wpcf7-f4375-p"] button.cf7mls_back {   }div[id^="wpcf7-f3947-p"] button.cf7mls_next {   }div[id^="wpcf7-f3947-p"] button.cf7mls_back {   }div[id^="wpcf7-f3931-p"] button.cf7mls_next {   }div[id^="wpcf7-f3931-p"] button.cf7mls_back {   }div[id^="wpcf7-f2499-p"] button.cf7mls_next {   }div[id^="wpcf7-f2499-p"] button.cf7mls_back {   }div[id^="wpcf7-f2145-p"] button.cf7mls_next {   }div[id^="wpcf7-f2145-p"] button.cf7mls_back {   }div[id^="wpcf7-f1884-p"] button.cf7mls_next {   }div[id^="wpcf7-f1884-p"] button.cf7mls_back {   }div[id^="wpcf7-f1448-p"] button.cf7mls_next {   }div[id^="wpcf7-f1448-p"] button.cf7mls_back {   }div[id^="wpcf7-f27-p"] button.cf7mls_next {   }div[id^="wpcf7-f27-p"] button.cf7mls_back {   }</style>	<style type="text/css">
-        .site-title,
-        .site-description {
-            position: absolute;
-            clip: rect(1px, 1px, 1px, 1px);
-        }
-    </style>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/fonts/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico">
     <meta name="msapplication-TileColor" content="#ee6072">
     <meta name="theme-color" content="#ffffff">
     <?php $this->head() ?>
