@@ -7,6 +7,20 @@ use yii\web\View;
  */
 ?>
 
+<section id="signup-footer" class="signup-section inverse">
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="medium-8 cell text-center medium-text-left">
+                <h2 class="h3 section-headline">Заказать онлайн</h2>
+            </div><!-- .medium-8.cell -->
+            <div class="medium-4 cell text-center large-text-right">
+                <a id="footer-ordercontent-cta" class="inverse button" href="https://app.topcontent.com/signup">
+                    Зарегистрируйтесь и закажите контент</a>
+            </div><!-- .medium-4.cell -->
+        </div><!-- .grid-x -->
+    </div><!-- .grid-container -->
+</section><!-- #signup-footer.signup-section -->
+
 <footer class="footer">
     <div id="cookie-message" class="fixed-message hide" data-closable>
         <div class="grid-container">

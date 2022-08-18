@@ -2,8 +2,10 @@
 
 namespace app\controllers;
 
+use app\components\enums\ViewParamsEnum;
 use Yii;
 use yii\filters\AccessControl;
+use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\forms\LoginForm;
@@ -34,35 +36,8 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+        $this->view->params[ViewParamsEnum::IS_MAIN_PAGE] = true;
+        $this->view->params[ViewParamsEnum::NOT_USE_GRID_CONTAINER] = true;
 		return $this->render('index');
-	}
-
-	/**
-	 * Displays contact page.
-	 *
-	 * @return Response|string
-	 */
-	public function actionContact()
-	{
-		$model = new ContactForm();
-		if ($model->load(Yii::$app->request->post()) && $model->contact()) {
-			Yii::$app->session->setFlash('contactFormSubmitted');
-
-			return $this->refresh();
-		}
-
-		return $this->render('contact', [
-			'model' => $model,
-		]);
-	}
-
-	/**
-	 * Displays about page.
-	 *
-	 * @return string
-	 */
-	public function actionAbout()
-	{
-		return $this->render('about');
 	}
 }

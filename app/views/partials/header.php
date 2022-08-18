@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\ArrayHelper;
 use yii\web\View;
 
 /**
@@ -9,7 +10,7 @@ use yii\web\View;
 <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 <div class="sticky-header" data-sticky-container>
     <div data-sticky data-options="marginTop:0;">
-        <header id="masthead" class="site-header inverse" role="banner">
+        <header id="masthead" class="site-header inverse siteHeader  <?= ArrayHelper::getValue($this->params, 'isMainPage', false) ? '' : 'siteHeader__noMain' ?>" role="banner">
             <div class="grid-container">
 
                 <div class="top-bar">

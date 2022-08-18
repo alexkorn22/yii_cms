@@ -10,3 +10,17 @@ div[id^="wpcf7-f20423-p"] button.cf7mls_next {   }div[id^="wpcf7-f20423-p"] butt
   clip: rect(1px, 1px, 1px, 1px);
 }
 img.lazy{min-height:1px}
+
+.siteContent {
+  &__noMain {
+    padding-top: 100px;
+    padding-bottom: 35px;
+  }
+}
+
+.siteHeader {
+  &__noMain {
+    background: #fff !important;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 7%);
+  }
+}
