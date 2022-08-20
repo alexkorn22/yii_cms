@@ -40,7 +40,7 @@ use yii\web\View;
             <div class="grid-container">
                 <div class="grid-x grid-padding-x  align-justify">
                     <section id="text-12" class="widget widget_text large-2 medium-3 small-6 cell">			<div class="textwidget"><div class="footer-company-wrapper">
-                                <p><img loading="lazy" class="alignnone size-full wp-image-11094 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20160%2024&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2018/10/cropped-TopContent_source_sans_pro2.png" alt="logo" width="160" height="24"></p>
+                                <p><img loading="lazy" class="alignnone size-full wp-image-11094 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20160%2024&#x27;%3E%3C/svg%3E" data-src="/images/cropped-TopContent_source_sans_pro2.png" alt="logo" width="160" height="24"></p>
                                 <div class="company-slogan">Качественный контент легко и быстро 🚀</div>
                                 <div class="footer_social_links"><a class="social-link social-link-facebook" href="https://www.facebook.com/TopcontentCOM/" target="_blank" rel="noopener"><br>
                                         <i class="fab fa-facebook-square social-icon-lg"></i></a><br>
@@ -130,9 +130,9 @@ use yii\web\View;
                                         <i class="fab fa-linkedin social-icon-lg"></i>
                                     </a></div>
                                 <div class="we-accept">Мы принимаем</div>
-                                <div class="payments-logos"><img class="alignnone size-full wp-image-11105 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2029%2016&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/05/image-15.svg" alt width="29" height="16">
-                                    <img class="alignnone size-full wp-image-11106 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2025%2016&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/05/mc_symbol-1.svg" alt width="25" height="16">
-                                    <img class="alignnone size-full wp-image-11107 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2016&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/05/pp-logo-150px-1.svg" alt width="64" height="16"></div>
+                                <div class="payments-logos"><img class="alignnone size-full wp-image-11105 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2029%2016&#x27;%3E%3C/svg%3E" data-src="/images/image-15.svg" alt width="29" height="16">
+                                    <img class="alignnone size-full wp-image-11106 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2025%2016&#x27;%3E%3C/svg%3E" data-src="/images/mc_symbol-1.svg" alt width="25" height="16">
+                                    <img class="alignnone size-full wp-image-11107 lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2016&#x27;%3E%3C/svg%3E" data-src="/images/pp-logo-150px-1.svg" alt width="64" height="16"></div>
                             </div></div></div>							</div><!-- .grid-x -->
             </div><!-- .grid-container -->
         </div><!-- #footer-widgets -->

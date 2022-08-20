@@ -9,7 +9,7 @@ $assets = AssetBundle::register($this);
 $this->title = 'Купить контент онлайн | Быстро выполним любой заказ на 15 языках | Topcontent';
 ?>
 
-<div class="entry-cover entry-cover-page inverse lazy" style data-bg="url(https://topcontent.com/wp-content/uploads/2021/01/buy_content_online.jpg)">
+<div class="entry-cover entry-cover-page inverse lazy" style data-bg="url(/images/main-page/buy_content_online.jpeg)">
     <div class="dark-filter"></div>
     <div class="grid-container">
         <div class="grid-x grid-padding-x align-middle align-center">
@@ -18,7 +18,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                     <h1 class="entry-title">Покупайте контент для своих сайтов</h1>
                     <div class="lead"><p><span style="font-weight: 400;">Благодаря нашему собственному сервису самообслуживания Topcontent Self-Service в распоряжении каждого зарегистрированного пользователя есть удобный личный кабинет, через который просто покупать контент онлайн, совершать оплату и отслеживать статус выполнения всех заказов.</span></p>
                     </div>
-                    <a class="button" href="https://app.topcontent.com/signup?customer" target>Создать аккаунт</a>
+                    <a class="button" href="javascript:void(0)" target>Создать аккаунт</a>
                 </header><!-- .entry-header -->
                 <div class="scroll-down-wrapper text-center">
                     <a class="scroll-down" href="#why_us"><i class="fa fa-chevron-down"></i></a>
@@ -46,7 +46,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
             </div>
             <div class="service-feature__block">
                 <div class="service-feature__img">
-                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/03/rocket.svg" alt="service feature icon">
+                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="/images/main-page/rocket.svg" alt="service feature icon">
                 </div>
                 <!-- /.service-feature__img -->
                 <div class="service-feature__text">
@@ -58,7 +58,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
             <!-- /.service-feature__block -->
             <div class="service-feature__block">
                 <div class="service-feature__img">
-                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/03/cart.svg" alt="service feature icon">
+                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="/images/main-page/cart.svg" alt="service feature icon">
                 </div>
                 <!-- /.service-feature__img -->
                 <div class="service-feature__text">
@@ -70,7 +70,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
             <!-- /.service-feature__block -->
             <div class="service-feature__block">
                 <div class="service-feature__img">
-                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/03/speed.svg" alt="service feature icon">
+                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="/images/main-page/speed.svg" alt="service feature icon">
                 </div>
                 <!-- /.service-feature__img -->
                 <div class="service-feature__text">
@@ -82,14 +82,14 @@ $this->title = 'Купить контент онлайн | Быстро выпо
             <!-- /.service-feature__block -->
             <div class="service-feature__block">
                 <div class="service-feature__img">
-                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2020/03/chat.svg" alt="service feature icon">
+                    <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%2064%2064&#x27;%3E%3C/svg%3E" data-src="/images/main-page/chat.svg" alt="service feature icon">
                 </div>
                 <!-- /.service-feature__img -->
                 <div class="service-feature__text">
                     <h3>Гибкая система рецензирования</h3>
                     <p><span style="font-weight: 400;">У вас есть возможность предварительно просмотреть готовый текст в личном кабинете и отправить нам его обратно с вашими комментариями. Если вы считаете, что статью нужно улучшить, вы можете ее вернуть автору с вашими замечаниями и пожеланиями.</span></p>
                     <div class="service-feature__btn text-center">
-                        <a class="button" href="https://app.topcontent.com/signup?customer">Зарегистрируйтесь и заказывайте контент</a>
+                        <a class="button" href="javascript:void(0)">Зарегистрируйтесь и заказывайте контент</a>
                     </div>
                 </div>
                 <!-- /.service-feature__text -->
@@ -110,7 +110,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                 <div class="how-it__works-features__section">
                     <div class="how-it__works-feature__block how-it__works-feature__arrow">
                         <div class="how-it__works-feature__img">
-                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/themes/nelumbo-topcontent/img/icons/24х24.png" alt="icon">
+                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="/images/main-page/24х24.png" alt="icon">
                         </div>
                         <!-- /.how-it__works-feature__img -->
                         <div class="how-it__works-feature__text">
@@ -120,7 +120,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                     <!-- /.how-it__works-feature__block -->
                     <div class="how-it__works-feature__block how-it__works-feature__arrow">
                         <div class="how-it__works-feature__img">
-                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/themes/nelumbo-topcontent/img/icons/doc.png" alt="doc">
+                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="/images/main-page/doc.png" alt="doc">
                         </div>
                         <!-- /.how-it__works-feature__img -->
                         <div class="how-it__works-feature__text">
@@ -130,7 +130,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                     <!-- /.how-it__works-feature__block -->
                     <div class="how-it__works-feature__block how-it__works-feature__arrow">
                         <div class="how-it__works-feature__img">
-                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/themes/nelumbo-topcontent/img/icons/dimond.png" alt="dimond">
+                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="/images/main-page/dimond.png" alt="dimond">
                         </div>
                         <!-- /.how-it__works-feature__img -->
                         <div class="how-it__works-feature__text">
@@ -140,7 +140,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                     <!-- /.how-it__works-feature__block -->
                     <div class="how-it__works-feature__block">
                         <div class="how-it__works-feature__img">
-                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/themes/nelumbo-topcontent/img/icons/cart.png" alt="shoping cart">
+                            <img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%201%201&#x27;%3E%3C/svg%3E" data-src="/images/main-page/cart.png" alt="shoping cart">
                         </div>
                         <!-- /.how-it__works-feature__img -->
                         <div class="how-it__works-feature__text">
@@ -159,7 +159,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                     </div>
                     <div class="how-it__works-btns__wrapper">
                         <div class="how-it__works__quote-btn__red">
-                            <a href="https://app.topcontent.com/signup?customer">Купить контент сейчас</a>
+                            <a href="javascript:void(0)">Купить контент сейчас</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ $this->title = 'Купить контент онлайн | Быстро выпо
                 <h2>Сколько это стоит?</h2>
                 <p><span style="font-weight: 400;">У нас простое и четкое ценообразование. Когда вы покупаете у нас уникальный контент, вы платите за слово готового текста в соответствии с выбранным качеством контента (Стандарт или Бизнес).</span></p>
                 <p><span style="font-weight: 400;">Чтобы купить контент, который вам нужен, просто пополните баланс вашего счета в личном кабинете.</span></p>
-                <p><a class="button" href="https://topcontent.com/ru/tseny-na-kontent-i-perevody-dlya-raznyh-yazykov/">Подробно о наших ценах</a></p>
+                <p><a class="button" href="javascript:void(0)">Подробно о наших ценах</a></p>
             </div>
             <!-- .content-area -->
         </div>

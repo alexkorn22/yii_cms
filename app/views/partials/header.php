@@ -17,7 +17,7 @@ use yii\web\View;
                     <div class="top-bar-left">
                         <div class="top-bar-title">
                             <ul class="site-branding align-middle menu">
-                                <li class="site-logo"><a href="https://topcontent.com/ru/" class="custom-logo-link" rel="home"><img width="445" height="53" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20445%2053&#x27;%3E%3C/svg%3E" data-src="https://topcontent.com/wp-content/uploads/2018/10/TopContent_source_sans_pro2.png" class="custom-logo lazy" alt="Topcontent" data-srcset="https://topcontent.com/wp-content/uploads/2018/10/TopContent_source_sans_pro2.png 445w, https://topcontent.com/wp-content/uploads/2018/10/TopContent_source_sans_pro2-300x36.png 300w" data-sizes="(max-width: 445px) 100vw, 445px"></a></li>
+                                <li class="site-logo"><a href="https://topcontent.com/ru/" class="custom-logo-link" rel="home"><img width="445" height="53" src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20445%2053&#x27;%3E%3C/svg%3E" data-src="/images/TopContent_source_sans_pro2.png" class="custom-logo lazy" alt="Topcontent" data-srcset="/images/TopContent_source_sans_pro2.png 445w, /images/TopContent_source_sans_pro2-300x36.png 300w" data-sizes="(max-width: 445px) 100vw, 445px"></a></li>
                                 <li class="site-title">
                                     <a href="https://topcontent.com/ru/" rel="home">Topcontent</a>
                                 </li><!-- .site-title -->
