@@ -2,8 +2,8 @@
 
 namespace app\widgets;
 
-use app\modules\admin\controllers\LanguagesController;
 use app\modules\admin\models\Language;
+use app\services\LanguageService;
 use Yii;
 use yii\base\Widget;
 
@@ -17,12 +17,11 @@ class LanguageSwitcher extends Widget
             ->select(['label', 'code'])
             ->where(['visible' => 1])
             ->orderBy('position')
-            ->asArray()
             ->all();
 
         if (count($languages) > 1) {
             return $this->render('LanguageSwitcher/index', [
-                'label' => LanguagesController::getLabelByCode(Yii::$app->language),
+                'label' => LanguageService::getLabelByCode(Yii::$app->language),
                 'languages' => $languages,
                 'icon' => $this->icon,
             ]);

@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 /* @var $this View
  * @var $label string
- * @var $languages array
+ * @var $languages app\modules\admin\models\Language[]
  * @var $icon boolean
  */
 
@@ -20,10 +20,10 @@ use yii\helpers\Url;
     <ul class="dropdown menu" data-toggle <? if ($icon): ?> style="left: 20px" <? endif; ?>>
         <? foreach ($languages as $language): ?>
             <li class="lang-item menu-item">
-                <a href="<?= Url::to([Url::base(), 'language' => $language['code']]) ?>"
-                   hreflang="<?= $language['code'] ?>"
-                   lang="<?= $language['code'] ?>">
-                    <?= $language['label'] ?>
+                <a href="<?= Url::to([Url::base(), 'language' => $language->code]) ?>"
+                   hreflang="<?= $language->code ?>"
+                   lang="<?= $language->code ?>">
+                    <?= $language->label ?>
                 </a>
             </li>
         <? endforeach; ?>

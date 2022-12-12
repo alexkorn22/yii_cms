@@ -2,7 +2,7 @@
 
 namespace app\modules\admin;
 
-use app\modules\admin\controllers\LanguagesController;
+use app\services\LanguageService;
 use Yii;
 
 class Module extends \yii\base\Module
@@ -30,7 +30,7 @@ class Module extends \yii\base\Module
 		// reconfigure service container.
 		Yii::configure(Yii::$container, require(__DIR__ . '/config/container.php'));
 
-        if (in_array(Yii::$app->settings->app->adminLanguage, LanguagesController::getCodes())) {
+        if (in_array(Yii::$app->settings->app->adminLanguage, LanguageService::getCodes())) {
             Yii::$app->language = Yii::$app->settings->app->adminLanguage;
         }
 
