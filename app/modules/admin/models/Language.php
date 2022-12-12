@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\models;
 
+use app\components\enums\VisibleEnum;
 use app\traits\models\WithVisible;
 use Yii;
 
@@ -18,9 +19,6 @@ class Language extends \yii\db\ActiveRecord
 {
     use WithVisible;
 
-    const VISIBLE_FALSE = 0;
-    const VISIBLE_TRUE = 1;
-
     /**
      * {@inheritdoc}
      */
@@ -35,8 +33,8 @@ class Language extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            ['visible', 'default', 'value' => self::VISIBLE_FALSE],
-            ['visible', 'in', 'range' => [self::VISIBLE_TRUE, self::VISIBLE_FALSE]],
+            ['visible', 'default', 'value' => VisibleEnum::HIDDEN],
+            ['visible', 'in', 'range' => [VisibleEnum::VISIBLE, VisibleEnum::HIDDEN]],
             [['position'], 'integer'],
             [['visible'], 'boolean'],
             [['label', 'code'], 'string', 'max' => 255],
@@ -55,19 +53,6 @@ class Language extends \yii\db\ActiveRecord
             'code' => 'Code',
             'visible' => 'Visible',
             'position' => 'Position',
-        ];
-    }
-
-    /**
-     * List of language visible aliases
-     *
-     * @return array
-     */
-    public static function getVisibleList()
-    {
-        return [
-            static::VISIBLE_TRUE  => 'Visible',
-            static::VISIBLE_FALSE => 'Hide',
         ];
     }
 }

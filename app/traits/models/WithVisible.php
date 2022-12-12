@@ -2,6 +2,7 @@
 
 namespace app\traits\models;
 
+use app\components\enums\VisibleEnum;
 use yii\helpers\ArrayHelper;
 
 /**
@@ -13,14 +14,8 @@ use yii\helpers\ArrayHelper;
  */
 trait WithVisible
 {
-    public static function getVisibleList()
-    {
-        return [
-        ];
-    }
-
     public function getVisibleAlias()
     {
-        return ArrayHelper::getValue(static::getVisibleList(), $this->visible);
+        return ArrayHelper::getValue(VisibleEnum::listData(), $this->visible);
     }
 }
