@@ -45,19 +45,6 @@ class LanguagesController extends Controller
     }
 
     /**
-     * Displays a single Language model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-//    public function actionView($id)
-//    {
-//        return $this->render('view', [
-//            'model' => $this->findModel($id),
-//        ]);
-//    }
-
-    /**
      * Creates a new Language model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -128,21 +115,5 @@ class LanguagesController extends Controller
     public static function getHighestPosition()
     {
         return Language::find()->max('position') ?? 0;
-    }
-
-    public static function getLabelByCode($code)
-    {
-        $result = Language::find()->select(['label'])->where(['code' => $code])->asArray()->one();
-
-        if (isset($result['label'])) {
-            return $result['label'];
-        }
-
-        return "";
-    }
-
-    public static function getCodes(): array
-    {
-        return Language::find()->select('code')->column();
     }
 }

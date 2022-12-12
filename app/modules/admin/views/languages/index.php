@@ -1,9 +1,8 @@
 <?php
 
-use app\modules\admin\models\Language;
+use app\components\enums\VisibleEnum;
 use app\modules\admin\widgets\BoxGridView;
 use yii\helpers\Html;
-use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\admin\models\LanguageSearch */
@@ -16,8 +15,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php $this->beginBlock('content-title'); ?>
     <?= Html::a('Add New', ['create'], ['class' => 'btn btn-sm btn-success']) ?>
     <?php $this->endBlock(); ?>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= BoxGridView::widget([
         'dataProvider' => $dataProvider,
@@ -34,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => Html::activeDropDownList(
                     $searchModel,
                     'visible',
-                    Language::getVisibleList(),
+                    VisibleEnum::listData(),
                     ['prompt' => 'All', 'class' => 'form-control']
                 ),
             ),
