@@ -44,6 +44,7 @@ $config = [
 			'class' => \justcoded\yii2\rbac\components\DbManager::class,
 		],
 		'urlManager' => [
+            'class' => 'app\components\UrlManager',
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
 			'rules' => require(__DIR__ . '/routes.php'),
