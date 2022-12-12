@@ -6,6 +6,7 @@ return [
 	'Имя' => 'Name',
 	'Язык' => 'Language',
 	'Язык админки' => 'Admin language',
+	'Язык сайта по умолчанию' => 'Site default language',
 	'Настройки приложения' => 'App settings',
 	'Настройки' => 'Settings',
 	'Приложение' => 'App',

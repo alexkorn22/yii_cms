@@ -13,8 +13,7 @@ $config = [
     'name' => 'Top-content',
 	'runtimePath'   => dirname(__DIR__) . '/runtime',
 	'vendorPath'   => dirname(__DIR__) . '/vendor',
-	'bootstrap'  => ['log', 'settings'],
-    'language'   => 'ru',
+	'bootstrap'  => ['languageSelector', 'log', 'settings'],
     'sourceLanguage'   => 'ru',
 	'aliases'    => [
 		'@config'=> '@app/../config',
@@ -47,8 +46,13 @@ $config = [
             'class' => 'app\components\UrlManager',
 			'enablePrettyUrl' => true,
 			'showScriptName' => false,
+            'enableLanguageDetection' => false,
 			'rules' => require(__DIR__ . '/routes.php'),
 		],
+        'languageSelector' => [
+            'class' => 'app\components\LanguageSelector',
+            'defaultLanguage' => 'ru',
+        ],
 		'formatter' => [
 			'class' => \app\i18n\Formatter::class,
 		],
