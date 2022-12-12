@@ -21,7 +21,7 @@ use yii\bootstrap4\ActiveForm;
         <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'position')->textInput([
-            'value' => strval(LanguagesController::getHighestPosition() + 1),
+            'value' => $model->isNewRecord ? strval(LanguagesController::getHighestPosition() + 1) : $model->position,
             'type' => 'number'
 
         ]) ?>

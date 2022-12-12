@@ -23,7 +23,7 @@ class LanguagesController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['GET'],
+                    'delete' => ['POST'],
                 ],
             ],
         ];
@@ -67,7 +67,7 @@ class LanguagesController extends Controller
         $model = new Language();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect('index');
         }
 
         return $this->render('create', [
@@ -87,7 +87,7 @@ class LanguagesController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect('index');
         }
 
         return $this->render('update', [
@@ -125,7 +125,19 @@ class LanguagesController extends Controller
         throw new NotFoundHttpException('The requested page does not exist.');
     }
 
-    public static function getHighestPosition() {
+    public static function getHighestPosition()
+    {
         return Language::find()->max('position') ?? 0;
+    }
+
+    public static function getLabelByCode($code)
+    {
+        $result = Language::find()->select(['label'])->where(['code' => $code])->asArray()->one();
+
+        if (isset($result['label'])) {
+            return $result['label'];
+        }
+
+        return "";
     }
 }
