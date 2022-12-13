@@ -2,6 +2,7 @@
 
 namespace app\modules\admin;
 
+use app\services\LanguageService;
 use Yii;
 
 class Module extends \yii\base\Module
@@ -29,7 +30,9 @@ class Module extends \yii\base\Module
 		// reconfigure service container.
 		Yii::configure(Yii::$container, require(__DIR__ . '/config/container.php'));
 
-        Yii::$app->language = Yii::$app->settings->app->adminLanguage;
+        if (in_array(Yii::$app->settings->app->adminLanguage, LanguageService::getCodes())) {
+            Yii::$app->language = Yii::$app->settings->app->adminLanguage;
+        }
 
 		// set bootstrap version to 4 for Kartik widgets.
 		Yii::$app->params['bsVersion'] = 4;
