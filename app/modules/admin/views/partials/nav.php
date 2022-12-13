@@ -98,6 +98,12 @@ use app\modules\admin\widgets\Menu;
 							['label' => 'Debug', 'url' => ['/debug'], 'attributes' => 'target="_blank"'],
 						],
 					],
+                    [
+                        'label' => Main::t('Языки'),
+                        'icon' => 'fas fa-language',
+                        'url' => ['/admin/languages'],
+                        'active' => 'languages' === Yii::$app->controller->id,
+                    ],
 				],
 			]) ?>
 		</nav>

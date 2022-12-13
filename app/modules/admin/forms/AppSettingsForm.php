@@ -8,11 +8,13 @@ use yii\helpers\ArrayHelper;
 class AppSettingsForm extends AppSettingsFormMain
 {
     public $adminLanguage = 'ru';
+    public $siteLanguage = 'ru';
 
     public function rules(): array
     {
         return ArrayHelper::merge(parent::rules(), [
             ['adminLanguage', 'string'],
+            ['siteLanguage', 'string'],
         ]);
     }
 

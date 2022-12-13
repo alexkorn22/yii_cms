@@ -9,6 +9,7 @@
   "require": {
     "php": ">=7.0",
     "almasaeed2010/adminlte": "v3.0.0-beta.1",
+    "codemix/yii2-localeurls": "^1.8",
     "creocoder/yii2-nested-sets": "^0.9.0",
     "justcoded/dotenv-sync": "*",
     "justcoded/yii2-rbac": "*",
