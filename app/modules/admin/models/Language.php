@@ -37,8 +37,8 @@ class Language extends \yii\db\ActiveRecord
             ['visible', 'in', 'range' => [VisibleEnum::VISIBLE, VisibleEnum::HIDDEN]],
             [['position'], 'integer'],
             [['visible'], 'boolean'],
-            [['label', 'code'], 'string', 'max' => 255],
-            [['label'], 'required'],
+            [['name', 'label', 'code'], 'string', 'max' => 255],
+            [['name', 'label'], 'required'],
         ];
     }
 
@@ -49,6 +49,7 @@ class Language extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'name' => 'Name',
             'label' => 'Label',
             'code' => 'Code',
             'visible' => 'Visible',
