@@ -19,7 +19,7 @@ class LanguageSearch extends Language
         return [
             [['id', 'position'], 'integer'],
             [['visible'], 'boolean'],
-            [['label', 'code', 'visible', 'position'], 'safe'],
+            [['name', 'label', 'code', 'visible', 'position'], 'safe'],
         ];
     }
 
