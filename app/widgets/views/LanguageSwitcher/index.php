@@ -20,7 +20,7 @@ use yii\helpers\Url;
     <ul class="dropdown menu" data-toggle <? if ($icon): ?> style="left: 20px" <? endif; ?>>
         <? foreach ($languages as $language): ?>
             <li class="lang-item menu-item">
-                <a href="<?= Url::to([Url::base(), 'language' => $language->code]) ?>"
+                <a href="<?= Url::to(array_merge([Yii::$app->controller->route, 'language' => $language->code], $_GET)) ?>"
                    hreflang="<?= $language->code ?>"
                    lang="<?= $language->code ?>">
                     <?= $language->label ?>
