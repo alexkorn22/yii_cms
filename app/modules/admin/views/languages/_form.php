@@ -16,6 +16,8 @@ use yii\bootstrap4\ActiveForm;
     ]); ?>
 
     <div class="card-body">
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+
         <?= $form->field($model, 'label')->textInput(['maxlength' => true]) ?>
 
         <?= $form->field($model, 'code')->textInput(['maxlength' => true]) ?>

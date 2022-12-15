@@ -1,6 +1,7 @@
 <?php
 
 use app\modules\admin\helpers\Main;
+use app\services\LanguageService;
 use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
 
@@ -42,7 +43,9 @@ $this->params['subheading']    = Main::t('Приложение');
         ])->label(Main::t('Язык')) ?>
 
         <h4><?= Main::t('Язык сайта по умолчанию')?></h4>
-        <?= $form->field($model, 'siteLanguage')->input('text')->label(Main::t('Язык')) ?>
+        <?= $form->field($model, 'siteLanguage')
+            ->dropdownList(LanguageService::getLanguageOptions())
+            ->label(Main::t('Язык')) ?>
 
 	</div>
 	<div class="card-footer text-right">

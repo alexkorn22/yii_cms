@@ -17,11 +17,16 @@ class m221211_130450_create_language_table extends Migration
 	{
 		$this->createTable('{{%language}}', [
             'id' => $this->primaryKey(),
+            'name' => $this->string(),
             'label' => $this->string(),
             'code' => $this->string(),
             'visible' => $this->boolean()->defaultValue(false),
             'position' => $this->integer()->defaultValue(1)->notNull(),
 		], $this->createTableOptions());
+
+        $this->batchInsert('language', ['name', 'label', 'code', 'visible', 'position'], [
+            ['Русский', 'RU', 'ru', 1, 1]
+        ]);
 	}
 
 	/**
