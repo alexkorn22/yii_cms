@@ -5,6 +5,17 @@
 use yii\helpers\Html;
 
 $this->title = $model->title;
+
+$this->registerMetaTag([
+    'name' => 'title',
+    'content' => $model->meta_title
+]);
+
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => $model->meta_description
+]);
+
 ?>
 
 <div class="page-view">

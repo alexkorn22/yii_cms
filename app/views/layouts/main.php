@@ -27,7 +27,6 @@ WebpackAsset::register($this);
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <meta name="description" content="Покупайте контент и переводы на 15 языках от Topcontent онлайн. Размещайте и отслеживайте статус своих заказов через наш удобный сервис самообслуживания.">
     <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="en_GB">
     <meta property="og:locale:alternate" content="nb_NO">
