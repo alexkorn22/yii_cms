@@ -104,6 +104,12 @@ use app\modules\admin\widgets\Menu;
                         'url' => ['/admin/languages'],
                         'active' => 'languages' === Yii::$app->controller->id,
                     ],
+                    [
+                        'label' => Main::t('Страницы'),
+                        'icon' => 'fas fa-file',
+                        'url' => ['/admin/page'],
+                        'active' => 'page' === Yii::$app->controller->id,
+                    ],
 				],
 			]) ?>
 		</nav>

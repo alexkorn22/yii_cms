@@ -13,7 +13,7 @@ $config = [
     'name' => 'Top-content',
 	'runtimePath'   => dirname(__DIR__) . '/runtime',
 	'vendorPath'   => dirname(__DIR__) . '/vendor',
-	'bootstrap'  => ['languageSelector', 'log', 'settings'],
+	'bootstrap'  => ['languageSelector', '\app\components\bootstraps\PageBootstrap', 'log', 'settings'],
     'sourceLanguage'   => 'ru',
 	'aliases'    => [
 		'@config'=> '@app/../config',
@@ -100,6 +100,26 @@ $config = [
 			],
 		],
 		'settings' => $settings,
+        'view' => [
+            'class' => 'yii\web\View',
+            'renderers' => [
+                'twig' => [
+                    'class' => 'yii\twig\ViewRenderer',
+                    'cachePath' => '@runtime/Twig/cache',
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    'globals' => [
+                        'html' => ['class' => '\yii\helpers\Html'],
+                    ],
+                    'uses' => ['yii\bootstrap'],
+                    'extensions' => [
+                        'Twig\Extension\StringLoaderExtension',
+                        '\yii\twig\html\HtmlHelperExtension'
+                    ]
+                ],
+            ],
+        ],
 	],
 	// enable Bootstrap4 in Kartik widgets like Select2.
 	'params' => [

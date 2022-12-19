@@ -21,7 +21,7 @@ use \app\widgets\LanguageSwitcher;
                     <div class="top-bar-left">
                         <div class="top-bar-title">
                             <ul class="site-branding align-middle menu">
-                                <li class="site-logo"><a href="<?= Yii::$app->urlManager->baseUrl ?>"
+                                <li class="site-logo"><a href="<?= Url::to('/') ?>"
                                                          class="custom-logo-link" rel="home"><img width="445"
                                                                                                   height="53"
                                                                                                   src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%20445%2053&#x27;%3E%3C/svg%3E"
