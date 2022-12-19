@@ -100,6 +100,26 @@ $config = [
 			],
 		],
 		'settings' => $settings,
+        'view' => [
+            'class' => 'yii\web\View',
+            'renderers' => [
+                'twig' => [
+                    'class' => 'yii\twig\ViewRenderer',
+                    'cachePath' => '@runtime/Twig/cache',
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    'globals' => [
+                        'html' => ['class' => '\yii\helpers\Html'],
+                    ],
+                    'uses' => ['yii\bootstrap'],
+                    'extensions' => [
+                        'Twig\Extension\StringLoaderExtension',
+                        '\yii\twig\html\HtmlHelperExtension'
+                    ]
+                ],
+            ],
+        ],
 	],
 	// enable Bootstrap4 in Kartik widgets like Select2.
 	'params' => [
