@@ -19,11 +19,27 @@ class m221214_220558_create_page_table extends Migration
 			'id' => $this->primaryKey()->notNull(),
 			'link' => $this->string()->notNull()->unique(),
 			'name' => $this->string()->notNull(),
-			'title' => $this->string(),
-			'text' => $this->text(),
-			'meta_title' => $this->string(),
-			'meta_description' => $this->text(),
 		], $this->createTableOptions());
+
+        $this->createTable('{{%page_lang}}', [
+            'id' => $this->primaryKey(),
+            'page_id' => $this->integer(),
+            'language' => $this->string(),
+            'title' => $this->string(),
+            'text' => $this->text(),
+            'meta_title' => $this->string(),
+            'meta_description' => $this->text(),
+        ], $this->createTableOptions());
+
+        $this->addForeignKey(
+            'fk-page_id',
+            'page_lang',
+            'page_id',
+            'page',
+            'id',
+            'CASCADE',
+            'CASCADE'
+        );
 	}
 
 	/**
@@ -31,6 +47,8 @@ class m221214_220558_create_page_table extends Migration
 	 */
 	public function safeDown()
 	{
+        $this->dropForeignKey('fk-page_id', '{{%menu_lang}}');
 		$this->dropTable('{{%page}}');
+        $this->dropTable('{{%page_lang}}');
 	}
 }

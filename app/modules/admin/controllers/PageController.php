@@ -2,6 +2,7 @@
 
 namespace app\modules\admin\controllers;
 
+use app\services\LanguageService;
 use Yii;
 use app\modules\admin\models\Page;
 use app\modules\admin\models\PageSearch;
@@ -14,6 +15,9 @@ use yii\filters\VerbFilter;
  */
 class PageController extends Controller
 {
+
+    public $modelNameLang = 'PageLang';
+
     /**
      * {@inheritdoc}
      */
@@ -66,12 +70,21 @@ class PageController extends Controller
     {
         $model = new Page();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            foreach (Yii::$app->request->post($this->modelNameLang, []) as $language => $data) {
+                foreach ($data as $attribute => $translation) {
+                    $model->getTranslation($language)->$attribute = $translation;
+                }
+            }
+
+            $model->save();
+
+            return $this->redirect(['index']);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'languages' => LanguageService::getLanguageOptions()
         ]);
     }
 
@@ -87,11 +100,20 @@ class PageController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            foreach (Yii::$app->request->post($this->modelNameLang, []) as $language => $data) {
+                foreach ($data as $attribute => $translation) {
+                    $model->getTranslation($language)->$attribute = $translation;
+                }
+            }
+
+            $model->save();
+
+            return $this->redirect(['update', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'languages' => LanguageService::getLanguageOptions()
         ]);
     }
 

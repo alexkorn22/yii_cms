@@ -18,7 +18,7 @@ class PageSearch extends Page
     {
         return [
             [['id'], 'integer'],
-            [['link', 'name', 'title', 'text', 'meta_title', 'meta_description'], 'safe'],
+            [['link', 'name', 'title', 'text'], 'safe'],
         ];
     }
 
@@ -27,7 +27,6 @@ class PageSearch extends Page
      */
     public function scenarios()
     {
-        // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
 
@@ -40,7 +39,7 @@ class PageSearch extends Page
      */
     public function search($params)
     {
-        $query = Page::find();
+        $query = Page::find()->joinWith(['lang']);
 
         // add conditions that should always apply here
 
@@ -64,9 +63,7 @@ class PageSearch extends Page
         $query->andFilterWhere(['like', 'link', $this->link])
             ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'text', $this->text])
-            ->andFilterWhere(['like', 'meta_title', $this->meta_title])
-            ->andFilterWhere(['like', 'meta_description', $this->meta_description]);
+            ->andFilterWhere(['like', 'text', $this->text]);
 
         return $dataProvider;
     }

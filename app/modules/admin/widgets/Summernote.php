@@ -16,7 +16,7 @@ class Summernote extends Widget {
     {
         $view = $this->getView();
         SummernoteAsset::register($view);
-        $view->registerJs("$('[data-summernote-id=$this->attribute]').summernote();", View::POS_READY);
+        $view->registerJs("$('[data-summernote-id=\"$this->attribute\"]').summernote();", View::POS_READY);
     }
 
     public function run()

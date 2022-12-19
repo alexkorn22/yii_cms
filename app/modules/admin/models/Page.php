@@ -2,7 +2,9 @@
 
 namespace app\modules\admin\models;
 
+use app\traits\models\LangTrait;
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "page".
@@ -10,13 +12,23 @@ use Yii;
  * @property int $id
  * @property string $link
  * @property string $name
- * @property string $title
- * @property string $text
- * @property string $meta_title
- * @property string $meta_description
+ *
+ * @property PageLang[] $pageLangs
  */
-class Page extends \yii\db\ActiveRecord
+class Page extends ActiveRecord
 {
+    use LangTrait;
+
+    public function behaviors()
+    {
+        $behaviors = [];
+
+        return array_merge(
+            $behaviors,
+            $this->langBehaviors(['title', 'text', 'meta_title', 'meta_description'])
+        );
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -35,8 +47,7 @@ class Page extends \yii\db\ActiveRecord
             ['link', 'match',
                 'pattern' => '/^[a-z0-9_-]+$/',
                 'message' => 'Link can only contain alphanumeric characters, underscores and dashes.'],
-            [['text', 'meta_description'], 'string'],
-            [['link', 'name', 'title', 'meta_title'], 'string', 'max' => 255],
+            [['link', 'name'], 'string', 'max' => 255],
             [['link'], 'unique'],
         ];
     }
@@ -50,10 +61,14 @@ class Page extends \yii\db\ActiveRecord
             'id' => 'ID',
             'link' => 'Link',
             'name' => 'Name',
-            'title' => 'Title',
-            'text' => 'Text',
-            'meta_title' => 'Meta Title',
-            'meta_description' => 'Meta Description',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPageLangs()
+    {
+        return $this->hasMany(PageLang::className(), ['page_id' => 'id']);
     }
 }
