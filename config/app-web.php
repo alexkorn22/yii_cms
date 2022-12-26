@@ -61,12 +61,13 @@ $config = [
 		],
 		'i18n' => [
 			'translations' => [
-	            "*" => [
+	            "app*" => [
                     'class' => 'yii\i18n\DbMessageSource',
                     'forceTranslation' => true,
-                    'sourceMessageTable'=>'{{%source_message}}',
-                    'messageTable'=>'{{%message}}',
-                    'enableCaching' => false,
+                ],
+                "*" => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'forceTranslation' => true,
                 ]
 			],
 		],

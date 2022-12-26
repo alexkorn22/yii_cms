@@ -54,6 +54,11 @@ WebpackAsset::register($this);
 
 <body class="page-template page-template-templates page-template-buy-content-online-v2 page-template-templatesbuy-content-online-v2-php page page-id-11231 wp-custom-logo header-absolute group-blog">
 <div id="page" class="site off-canvas-wrapper">
+    <?= Yii::t('app', 'Отображаемое имя') ?>
+    <br>
+    <?= Yii::t('admin', 'Добавить') ?>
+    <br>
+    <?= Yii::t('kvbase', 'It is recommended you use an upgraded browser to display the {type} control properly.') ?>
     <div class="off-canvas position-right inverse" id="the-off-canvas" data-off-canvas>
         <ul id="off-canvas-menu" class="vertical menu"><li id="menu-item-11843" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-11843"><a href="#">Наши услуги</a>
                 <ul class="menu" data-toggle>
