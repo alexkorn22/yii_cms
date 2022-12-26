@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = ['label' => $model->label, 'url' => ['view', 'i
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
+    <br>
     <?= $this->render('_messages-form', [
         'searchModel' => $messageSearchModel,
         'dataProvider' => $messageDataProvider,

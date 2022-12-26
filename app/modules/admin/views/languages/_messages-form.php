@@ -12,7 +12,7 @@ use yii\web\View;
 /* @var $languageCode string */
 /* @var $form yii\widgets\ActiveForm */
 
-$script = <<< JS
+$editScript = <<< JS
  $('button.btn-edit').click(function(){
         $('#editModal').modal('show')
                 .find('#modalContent')
@@ -20,7 +20,26 @@ $script = <<< JS
     });
 JS;
 
-$this->registerJs($script, View::POS_READY);
+$toggleScript = <<< JS
+ $('[type="checkbox"]#toggleMessages').on('change', function(){
+   if($(this).is(':checked')) {
+    $('.messages-table').addClass('onlyEmpty'); 
+   } else {
+    $('.messages-table').removeClass('onlyEmpty');
+   }
+ });
+JS;
+
+$tableCss = <<< CSS
+.onlyEmpty tr.filled {
+   display: none;
+}
+CSS;
+
+
+$this->registerCss($tableCss);
+$this->registerJs($editScript, View::POS_READY);
+$this->registerJs($toggleScript, View::POS_READY);
 
 ?>
 
@@ -33,13 +52,25 @@ echo "<div id='modalContent'></div>";
 Modal::end();
 ?>
 
-<h2>Translations</h2>
+<div class="d-flex justify-content-between align-items-center">
+    <h2>Translations</h2>
+    <label for="toggleMessages">
+        <?= Html::checkbox(null, false, ['id' => 'toggleMessages']) ?>
+        Show messages without translations only
+    </label>
+</div>
 <div class="messages-table card">
     <?= BoxGridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'rowOptions' => function ($model) use ($languageCode) {
+            if (!empty($model->languages[$languageCode])) {
+                return [
+                    'class' => 'filled'
+                ];
+            }
+        },
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
             'category',
             'message:ntext',
             [
