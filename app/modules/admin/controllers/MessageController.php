@@ -2,18 +2,17 @@
 
 namespace app\modules\admin\controllers;
 
-use app\modules\admin\models\Language;
-use app\modules\admin\models\LanguageSearch;
-use app\modules\admin\models\SourceMessageSearch;
 use Yii;
-use yii\filters\VerbFilter;
+use app\modules\admin\models\SourceMessage;
+use app\modules\admin\models\SourceMessageSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
 
 /**
- * LanguagesController implements the CRUD actions for Language model.
+ * MessageController implements the CRUD actions for SourceMessage model.
  */
-class LanguagesController extends Controller
+class MessageController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -24,19 +23,19 @@ class LanguagesController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST', 'GET'],
+                    'delete' => ['POST'],
                 ],
             ],
         ];
     }
 
     /**
-     * Lists all Language models.
+     * Lists all SourceMessage models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new LanguageSearch();
+        $searchModel = new SourceMessageSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -46,16 +45,29 @@ class LanguagesController extends Controller
     }
 
     /**
-     * Creates a new Language model.
+     * Displays a single SourceMessage model.
+     * @param integer $id
+     * @return mixed
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Creates a new SourceMessage model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Language();
+        $model = new SourceMessage();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect('index');
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
@@ -64,7 +76,7 @@ class LanguagesController extends Controller
     }
 
     /**
-     * Updates an existing Language model.
+     * Updates an existing SourceMessage model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -74,22 +86,25 @@ class LanguagesController extends Controller
     {
         $model = $this->findModel($id);
 
-        $messageSearchModel = new SourceMessageSearch();
-        $messageDataProvider = $messageSearchModel->search(Yii::$app->request->queryParams);
+//        var_dump(Yii::$app->request->post()['SourceMessage']);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect('index');
+//            return $this->redirect(['view', 'id' => $model->id]);
         }
 
-        return $this->render('update', [
+        if(Yii::$app->request->isAjax) {
+            return $this->renderAjax('_form', [
+                'model' => $model
+            ]);
+        }
+
+        return $this->render('_form', [
             'model' => $model,
-            'messageSearchModel' => $messageSearchModel,
-            'messageDataProvider' => $messageDataProvider,
         ]);
     }
 
     /**
-     * Deletes an existing Language model.
+     * Deletes an existing SourceMessage model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -103,23 +118,18 @@ class LanguagesController extends Controller
     }
 
     /**
-     * Finds the Language model based on its primary key value.
+     * Finds the SourceMessage model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Language the loaded model
+     * @return SourceMessage the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Language::findOne($id)) !== null) {
+        if (($model = SourceMessage::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    public static function getHighestPosition()
-    {
-        return Language::find()->max('position') ?? 0;
     }
 }
