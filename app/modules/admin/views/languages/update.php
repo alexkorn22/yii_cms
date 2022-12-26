@@ -1,7 +1,5 @@
 <?php
 
-use yii\helpers\Html;
-
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\Language */
 /* @var $messageSearchModel app\modules\admin\models\SourceMessageSearch */
@@ -16,8 +14,6 @@ $this->params['breadcrumbs'][] = ['label' => $model->label, 'url' => ['view', 'i
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
-
-    <?= Yii::t('app', 'Отображаемое имя') ?>
 
     <?= $this->render('_messages-form', [
         'searchModel' => $messageSearchModel,

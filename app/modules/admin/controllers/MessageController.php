@@ -30,91 +30,33 @@ class MessageController extends Controller
     }
 
     /**
-     * Lists all SourceMessage models.
-     * @return mixed
-     */
-    public function actionIndex()
-    {
-        $searchModel = new SourceMessageSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single SourceMessage model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new SourceMessage model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new SourceMessage();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
      * Updates an existing SourceMessage model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $lang)
     {
         $model = $this->findModel($id);
 
-//        var_dump(Yii::$app->request->post()['SourceMessage']);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-//            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(Yii::$app->request->referrer);
         }
 
-        if(Yii::$app->request->isAjax) {
-            return $this->renderAjax('_form', [
-                'model' => $model
+        if ($lang) {
+            if (Yii::$app->request->isAjax) {
+                return $this->renderAjax('_form', [
+                    'model' => $model,
+                    'lang' => $lang
+                ]);
+            }
+
+            return $this->render('_form', [
+                'model' => $model,
+                'lang' => $lang
             ]);
         }
-
-        return $this->render('_form', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Deletes an existing SourceMessage model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
     }
 
     /**

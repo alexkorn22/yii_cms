@@ -1,73 +1,36 @@
 <?php
 
+use app\services\LanguageService;
+use yii\bootstrap4\ActiveForm;
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model app\modules\admin\models\SourceMessage */
 /* @var $form yii\widgets\ActiveForm */
+/* @var $lang string */
 ?>
 
-<div class="source-message-form">
+<div class="source-message-form card">
 
-    <?php $form = ActiveForm::begin([
-    ]); ?>
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-default">
+    <?php $form = ActiveForm::begin(); ?>
 
-                <div class="box-header with-border">
-                    <h3 class="box-title">Заполните форму</h3>
-                </div>
+    <div class="card-body">
+        <label>Source language</label>
+        <p><?= $model->message ?></p>
 
-                <div class="box-body">
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <?php
-                            $c = $form->field($model, 'category');
-                            if($model->isNewRecord){
-                                $c->textarea(['rows' => 1]);
-                            }else{
-                                $c->label(false)->hiddenInput();
-                            }
-                            echo $c;
-                            ?>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <?php
-                            $m = $form->field($model, 'message');
-                            if($model->isNewRecord){
-                                $m->textarea(['rows' => 1]);
-                            }else{
-                                $m->label(false)->hiddenInput();
-                            }
-                            echo $m;
-                            ?>
-                        </div>
-                    </div>
-                    <?php foreach (Yii::$app->getUrlManager()->languages as $one): ?>
-                        <div class="row">
-                            <div class="col-xs-12 col-md-12">
-                                <?= $form->field($model, 'languages['.$one.']')->label($one)->textarea(['rows' => 1]) ?>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <div class="form-group">
-                                <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        <? foreach (LanguageService::getCodes() as $code): ?>
+            <? if ($code === $lang): ?>
+                <?= $form->field($model, "languages[$lang]")->label("Translation")->textarea(['rows' => 1]) ?>
+            <? else: ?>
+                <?= $form->field($model, "languages[$code]")->label(false)->hiddenInput() ?>
+            <? endif; ?>
+        <? endforeach; ?>
     </div>
+
+    <div class="card-footer text-right">
+        <?= Html::submitButton($model->isNewRecord ? 'Save' : 'Update', ['class' => 'btn btn-success']) ?>
+    </div>
+
     <?php ActiveForm::end(); ?>
+
 </div>
