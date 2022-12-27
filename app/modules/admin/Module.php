@@ -17,8 +17,6 @@ class Module extends \yii\base\Module
      */
     public $defaultRoute = 'dashboard';
 
-    public $messages_grid_column = [];
-
     /**
      * @inheritdoc
      */
@@ -41,28 +39,5 @@ class Module extends \yii\base\Module
 
         // change error action to match admin styles.
         Yii::$app->errorHandler->errorAction = 'admin/dashboard/error';
-
-        $this->messages_grid_column = $this->getMessagesGridColumns();
-    }
-
-    public function getMessagesGridColumns()
-    {
-        $columns = [
-            ['class' => 'yii\grid\SerialColumn'],
-            'category',
-            'message:ntext'
-        ];
-
-        foreach (['ua'] as $one) {
-            $columns[] = [
-                'label' => $one,
-                'value' => 'languages.' . $one,
-                'filter' => '<input type="text" class="form-control" name="SourceMessageSearch[languages][' . $one . ']">',
-            ];
-        }
-
-        $columns[] = ['class' => 'yii\grid\ActionColumn'];
-
-        return $columns;
     }
 }
