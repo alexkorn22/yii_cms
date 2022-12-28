@@ -2,12 +2,13 @@
 
 namespace app\modules\admin\controllers;
 
-use Yii;
 use app\modules\admin\models\Language;
 use app\modules\admin\models\LanguageSearch;
+use app\modules\admin\models\SourceMessageSearch;
+use Yii;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
 
 /**
  * LanguagesController implements the CRUD actions for Language model.
@@ -73,12 +74,17 @@ class LanguagesController extends Controller
     {
         $model = $this->findModel($id);
 
+        $messageSearchModel = new SourceMessageSearch();
+        $messageDataProvider = $messageSearchModel->search(Yii::$app->request->queryParams);
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect('index');
         }
 
         return $this->render('update', [
             'model' => $model,
+            'messageSearchModel' => $messageSearchModel,
+            'messageDataProvider' => $messageDataProvider,
         ]);
     }
 
