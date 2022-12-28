@@ -61,20 +61,14 @@ $config = [
 		],
 		'i18n' => [
 			'translations' => [
-				'app*' => [
-					'class' => 'yii\i18n\PhpMessageSource',
-					'basePath' => '@app/i18n',
-					'fileMap' => [
-						'app' => 'app.php',
-					],
-				],
-                'admin*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
-                    'basePath' => '@app/i18n',
-                    'fileMap' => [
-                        'admin' => 'admin.php',
-                    ],
+	            "app*" => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'forceTranslation' => true,
                 ],
+                "*" => [
+                    'class' => 'yii\i18n\DbMessageSource',
+                    'forceTranslation' => true,
+                ]
 			],
 		],
 		'assetManager' => [
